@@ -8,14 +8,14 @@ const activeKey = ref([]);
 <template>
     <div id="course-display-box">
         <p>Course name: {{course.courseName}}</p>
-        <p>Modules: {{course.modules}}</p>
+        <!-- <p>Modules: {{course.modules}}</p> -->
         <a-collapse v-model:activeKey="activeKey" accordion>
             <a-collapse-panel v-for="module of course.modules" v-bind:key="module.key"
                 v-bind:header="module.moduleName">
-                <p>Chapters of module {{module.chapters}}</p>
                 <a-collapse accordion>
-                    <a-collapse-panel v-for="chapter of module.chapters" v-bind:key="chapter" v-bind:header="chapter">
-                        <p>Contents of chapter</p>
+                    <a-collapse-panel v-for="chapter of module.chapters" v-bind:key="chapter.key" v-bind:header="chapter.chapterName">
+                        <p>Contents of chapter: {{chapter.data}}</p>
+                        <p>tasks: {{chapter.tasks}}</p>
                     </a-collapse-panel>
                 </a-collapse>
             </a-collapse-panel>
