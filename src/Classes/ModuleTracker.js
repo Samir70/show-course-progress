@@ -14,4 +14,12 @@ export class ModuleTracker {
             })
         }
     }
+    countTasks = (history) => {
+        let count = { exists: 0, done: 0 }
+        for (let chapter in this.chapters) {
+            count.exists += this.chapters[chapter].taskCount
+            count.done += this.chapters[chapter].countCompletedTasks(history)
+        }
+        return count
+    }
 }

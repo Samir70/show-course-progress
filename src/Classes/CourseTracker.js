@@ -12,4 +12,13 @@ export class CourseTracker {
             })
         }
     }
+    countTasks = (history) => {
+        let count = {exists: 0, done: 0}
+        for (let module in this.modules) {
+            let moduleCount = this.modules[module].countTasks(history);
+            count.exists += moduleCount.exists;
+            count.done += moduleCount.done
+        }
+        return count
+    }
 }
