@@ -6,6 +6,7 @@ const props = defineProps({
 <template>
     <div id="course-display-box">
         <p>Course name: {{course.courseName}}</p>
+        <p>Modules: {{course.modules}}</p>
     </div>
 </template>
 <style>
