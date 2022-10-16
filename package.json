@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ant-design-vue": "^3.2.13",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
+    "unplugin-vue-components": "^0.22.8",
     "vite": "^3.1.0"
   }
 }
