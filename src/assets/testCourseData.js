@@ -1,4 +1,4 @@
-export const testCourse = {
+export const testCourseData = {
     courseName: "Some maths Qs",
     modules: {
         module1 : {
