@@ -10,5 +10,6 @@ export default defineConfig({
     Components({
       resolvers: [AntDesignVueResolver()]
     })
-  ]
+  ],
+  base: '/show-course-progress/'
 })
